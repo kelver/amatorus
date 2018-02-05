@@ -7,7 +7,13 @@
                 <div class="col-md-8"><h5 class="panel-title">Jogadores Cadastrados</h5></div>
                 <div class="col-md-4"><a href="{{ route('newJogadores') }}" class="btn bg-success-800 pull-right">Novo <i class="icon-add position-right"></i></a></div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body table-responsive">
+
+                <div style="width: 100%;">
+                    <div style="width: 50%; float:left;">asd</div>
+                    <div style="width: 50%; float: left;">asd</div>
+                    <div>asd</div>
+                </div>
 
                 <table class="table table-hover datatable-highlight">
                     <thead>
