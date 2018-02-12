@@ -20,15 +20,21 @@ Route::get('/perfil', 'PerfilController@index')->name('perfil');
 
 Route::get('/jogadores', 'JogadoresController@index')->name('indexJogadores');
 Route::get('/jogadores-new', 'JogadoresController@new')->name('newJogadores');
+Route::get('/jogadores-edit/{id}', 'JogadoresController@edit')->name('editJogadores');
 Route::post('/jogadoresStore', 'JogadoresController@store')->name('storeJogadores');
+Route::post('/jogadoresUpdate/{id}', 'JogadoresController@update')->name('updateJogadores');
 
 Route::get('/times', 'TimesController@index')->name('indexTimes');
 Route::get('/times-new', 'TimesController@new')->name('newTimes');
+Route::get('/times-edit/{id}', 'TimesController@edit')->name('editTimes');
 Route::post('/times', 'TimesController@store')->name('storeTimes');
+Route::post('/timesUpdate/{id}', 'TimesController@update')->name('updateTimes');
 
 Route::get('/torneios', 'TorneiosController@index')->name('indexTorneios');
 Route::get('/torneios-new', 'TorneiosController@new')->name('newTorneios');
+Route::get('/torneios-edit/{id}', 'TorneiosController@edit')->name('editTorneios');
 Route::post('/torneios', 'TorneiosController@store')->name('storeTorneios');
+Route::post('/torneiosUpdate/{id}', 'TorneiosController@update')->name('updateTorneios');
 
 Route::get('/usuarios', 'UsuariosController@index')->name('indexUsuarios');
 Route::get('/usuarios-new', 'UsuariosController@new')->name('newUsuarios');

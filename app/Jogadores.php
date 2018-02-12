@@ -14,7 +14,7 @@ class Jogadores extends Model
      * @var array
      */
     protected $fillable = [
-        'nome', 'email', 'complemento', 'cep', 'bairro', 'numero', 'endereco', 'cidade', 'estado', 'celular', 'telefone', 'data_nasc', 'idUser'
+        'nome', 'email', 'complemento', 'cep', 'bairro', 'numero', 'endereco', 'cidade', 'estado', 'celular', 'telefone', 'data_nasc', 'foto', 'idUser'
     ];
 
     /**

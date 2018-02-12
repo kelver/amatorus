@@ -31,6 +31,19 @@ class TorneiosController extends Controller
         return view('torneios/new', ['menu' => 'torneios', 'times' => $times]);
     }
 
+    public function edit($id)
+    {
+	    $times = Times::all();
+	    $torneio = Torneios::find($id);
+	
+	    $timesSelecionados = [];
+	    foreach($torneio->times as $ti){
+		    array_push($timesSelecionados, $ti->id);
+	    }
+	    
+        return view('torneios/edit', ['menu' => 'torneios', 'times' => $times, 'torneio' => $torneio, 'timesSelecionados' => $timesSelecionados]);
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -51,6 +64,20 @@ class TorneiosController extends Controller
 
         return redirect('/torneios')->with('message', 'Torneio cadastrado com sucesso.');
     }
+	
+	public function update(Request $request, $id)
+	{
+		$this->validate($request, [
+			'nome' => 'required',
+		]);
+		$torneios = Torneios::find($id);
+		$torneios->update($request->all());
+		
+		$torneios->times()->sync($request->time);
+		
+		
+		return redirect('/torneios')->with('message', 'Torneio atualizado com sucesso.');
+	}
 }
 
 

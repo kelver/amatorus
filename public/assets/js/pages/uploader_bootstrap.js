@@ -67,7 +67,7 @@ $(function() {
     //
 
     $('.file-input').fileinput({
-        browseLabel: 'Browse',
+        browseLabel: 'Buscar',
         browseIcon: '<i class="icon-file-plus"></i>',
         uploadIcon: '<i class="icon-file-upload2"></i>',
         removeIcon: '<i class="icon-cross3"></i>',
@@ -75,7 +75,7 @@ $(function() {
             icon: '<i class="icon-file-check"></i>',
             modal: modalTemplate
         },
-        initialCaption: "No file selected",
+        initialCaption: "Nenhum arquivo selecionado",
         previewZoomButtonClasses: previewZoomButtonClasses,
         previewZoomButtonIcons: previewZoomButtonIcons,
         fileActionSettings: fileActionSettings
@@ -91,7 +91,7 @@ $(function() {
         browseLabel: 'Select',
         browseClass: 'btn bg-slate-700',
         browseIcon: '<i class="icon-image2 position-left"></i> ',
-        removeLabel: 'Remove',
+        removeLabel: 'Remover',
         removeClass: 'btn btn-danger',
         removeIcon: '<i class="icon-cancel-square position-left"></i> ',
         uploadClass: 'btn bg-teal-400',
@@ -113,7 +113,7 @@ $(function() {
     //
 
     $('.file-input-advanced').fileinput({
-        browseLabel: 'Browse',
+        browseLabel: 'Buscar',
         browseClass: 'btn btn-default',
         removeClass: 'btn btn-default',
         uploadClass: 'btn bg-success-400',
@@ -130,7 +130,7 @@ $(function() {
                 "   {caption}\n" +
                 "   <div class='input-group-btn'>\n" +
                 "       {upload}\n" +
-                "       {remove}\n" +
+                "       {remover}\n" +
                 "   </div>\n" +
                 "</div>",
             modal: modalTemplate
@@ -147,7 +147,7 @@ $(function() {
     //
 
     $(".file-input-extensions").fileinput({
-        browseLabel: 'Browse',
+        browseLabel: 'Buscar',
         browseClass: 'btn btn-primary',
         uploadClass: 'btn btn-default',
         browseIcon: '<i class="icon-file-plus"></i>',
@@ -171,7 +171,7 @@ $(function() {
     //
 
     $(".file-input-preview").fileinput({
-        browseLabel: 'Browse',
+        browseLabel: 'Buscar',
         browseIcon: '<i class="icon-file-plus"></i>',
         uploadIcon: '<i class="icon-file-upload2"></i>',
         removeIcon: '<i class="icon-cross3"></i>',
@@ -201,7 +201,7 @@ $(function() {
     //
 
     $(".file-input-overwrite").fileinput({
-        browseLabel: 'Browse',
+        browseLabel: 'Buscar',
         browseIcon: '<i class="icon-file-plus"></i>',
         uploadIcon: '<i class="icon-file-upload2"></i>',
         removeIcon: '<i class="icon-cross3"></i>',

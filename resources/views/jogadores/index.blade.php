@@ -12,7 +12,7 @@
                 <table class="table table-hover datatable-highlight">
                     <thead>
                         <tr>
-                            <th style="width: 3%;">Cód.</th>
+                            <th></th>
                             <th>Nome</th>
                             <th>E-Mail</th>
                             <th>Telefones</th>
@@ -28,7 +28,7 @@
                     @else
                         @foreach ($jogadores as $jogador)
                             <tr>
-                                <td>{{ $jogador['id'] }}</td>
+                                <td><img src="/files/jogadores/{{ $jogador['id'] }}/{{ $jogador['foto'] }}" alt="{{ $jogador['nome'] }}" class="img-circle img-thumbnail" style="height:60px; width:60px; object-fit: cover;"></td>
                                 <td>{{ $jogador['nome'] }}</td>
                                 <td>{{ $jogador['email'] }}</td>
                                 <td>@if($jogador['telefone'] != ''){{ $jogador['telefone'] }} @endif
@@ -37,16 +37,20 @@
                                 <td>{{ $jogador->cidades->nome }} - {{ $jogador['bairro'] }}</td>
                                 <td class="text-center">
                                     <ul class="icons-list">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                <i class="icon-menu9"></i>
+                                        <li>
+                                            <a href="{{ route('editJogadores', $jogador['id']) }}">
+                                                <i class="fa fa-edit text-info-800"></i>
                                             </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="#"><i class="icon-file-pdf"></i> Export to .pdf</a></li>
-                                                <li><a href="#"><i class="icon-file-excel"></i> Export to .csv</a></li>
-                                                <li><a href="#"><i class="icon-file-word"></i> Export to .doc</a></li>
-                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-plus text-success-800"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-trash text-danger-800"></i>
+                                            </a>
                                         </li>
                                     </ul>
                                 </td>
