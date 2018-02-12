@@ -57,10 +57,6 @@ class TorneiosController extends Controller
 		
 		    $torneio->times()->sync($request->time);
 	    });
-	
-	    $torneios = new Torneios();
-	    $torneios->nome = $request->nome;
-	    $torneios->save();
 
         return redirect('/torneios')->with('message', 'Torneio cadastrado com sucesso.');
     }
