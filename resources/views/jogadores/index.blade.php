@@ -9,12 +9,6 @@
             </div>
             <div class="panel-body table-responsive">
 
-                <div style="width: 100%;">
-                    <div style="width: 50%; float:left;">asd</div>
-                    <div style="width: 50%; float: left;">asd</div>
-                    <div>asd</div>
-                </div>
-
                 <table class="table table-hover datatable-highlight">
                     <thead>
                         <tr>

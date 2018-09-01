@@ -123,7 +123,7 @@ class JogadoresController extends Controller
 		]);
 		
 		if($request->foto) {
-			unlink(public_path("/files/jogadores/{$jogadores->id}/{$jogadores->foto}"));
+			@unlink(public_path("/files/jogadores/{$jogadores->id}/{$jogadores->foto}"));
 			//Define nome da imagem para salvar no banco
 			$image    = $request->file( 'foto' );
 			$nomeFoto = time() . '.' . $image->getClientOriginalExtension();
